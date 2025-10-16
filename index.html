@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leite a Pasto 360 — Treinamento</title>
+  <meta name="description" content="Site simples e responsivo em uma única página. Fácil de editar." />
+  <style>
+    :root{
+      --bg: #0b1020;        /* Fundo geral */
+      --card:#0f1733;       /* Cartões */
+      --text:#e8ecf3;       /* Texto principal */
+      --muted:#a9b3c9;      /* Texto secundário */
+      --brand:#6ad27a;      /* Cor de destaque */
+      --accent:#8ab6ff;     /* Cor de acento */
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b1020 0%,#101a3a 100%);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;height:auto;border-radius:12px;box-shadow:var(--shadow)}
+    .container{width:min(1100px,92%);margin-inline:auto}
+    /* ======= NAV ======= */
+    header{position:sticky;top:0;background:rgba(11,16,32,.7);backdrop-filter:saturate(150%) blur(10px);border-bottom:1px solid rgba(255,255,255,.08);z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:10px;align-items:center}
+    .brand .logo{width:36px;height:36px;display:grid;place-items:center;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--accent));color:#05121e;font-weight:900}
+    .brand strong{font-size:18px;letter-spacing:.3px}
+    .nav a.btn{padding:10px 14px;border-radius:999px;background:var(--brand);color:#062016;font-weight:700;box-shadow:var(--shadow)}
+    /* ======= HERO ======= */
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;padding:56px 0}
+    .hero h1{font-size:clamp(28px,4vw,44px);line-height:1.15;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 22px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;border:1px solid rgba(255,255,255,.09);background:#121a39;color:var(--text);font-weight:600;cursor:pointer;transition:.2s}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{background:var(--brand);color:#062016;border:none}
+    .tagline{display:inline-flex;align-items:center;gap:8px;color:#0b1f14;background:rgba(106,210,122,.25);padding:6px 10px;border-radius:999px;font-weight:700}
+    /* ======= SECTIONS ======= */
+    section{padding:50px 0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 8px}
+    .muted{color:var(--muted)}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+    .list{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+    .list li{display:flex;gap:10px}
+    .list li::before{content:"✔";color:var(--brand)}
+    /* ======= FOOTER ======= */
+    footer{padding:40px 0;border-top:1px solid rgba(255,255,255,.08);color:var(--muted)}
+    .footer-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+    .social{display:flex;gap:10px}
+    .social a{padding:8px 12px;border:1px solid rgba(255,255,255,.12);border-radius:10px}
+    /* ======= RESPONSIVO ======= */
+    @media (max-width:900px){
+      .hero,.grid-2{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
+      .tagline{margin-bottom:10px}
+    }
+  </style>
+</head>
+<body>
+  <!-- DICA: Para editar textos, substitua diretamente aqui no HTML.
+       Para trocar imagens, atualize o src das <img>. Você pode publicar grátis no GitHub Pages.
+       Se quiser, eu personalizo tudo com seu logo, cores e conteúdo. -->
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">LP</div>
+        <strong>Leite a Pasto 360</strong>
+      </div>
+      <nav>
+        <a class="btn" href="#conteudo">Conteúdo</a>
+        <a class="btn" href="#sobre">Sobre</a>
+        <a class="btn" href="#contato">Contato</a>
+        <a class="btn" href="#faq">FAQ</a>
+        <a class="btn" href="#portfolio">Portfólio</a>
+        <a class="btn" href="#inscricoes">Inscrições</a>
+        <a class="btn primary" href="#contato">Quero participar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div>
+        <span class="tagline">🐄 Treinamento completo • sistema a pasto • resultados reais</span>
+        <h1>Leite a Pasto 360</h1>
+        <p>Venha fazer parte dessa história. Um método prático para aumentar produtividade, reduzir custos e construir um sistema de produção a pasto lucrativo e sustentável.</p>
+        <div class="cta">
+          <a class="btn primary" href="#inscricoes">Quero participar</a>
+          <a class="btn" href="#conteudo">Ver conteúdo do curso</a>
+          <a class="btn" href="https://wa.me/55629999993090?text=Tenho%20interesse%20no%20treinamento%20Leite%20a%20Pasto%20360" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        </div>
+      </div>
+      <div>
+        <!-- Use a sua foto 'vacas.jpg' no repositório -->
+        <img src="vacas.jpg" alt="Vacas a pasto ao amanhecer" />
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="conteudo">
+      <h2>O que você vai aprender</h2>
+      <p class="muted">Conteúdo em módulos, passo a passo, para você aplicar no dia a dia da fazenda.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>Planejamento de Pastagens</h3>
+          <p class="muted">Dimensionamento, calendário forrageiro e manejo rotacionado eficiente.</p>
+        </article>
+        <article class="card">
+          <h3>Nutrição a Pasto</h3>
+          <p class="muted">Níveis de amido, fibra efetiva, suplementação estratégica e ajuste por litragem.</p>
+        </article>
+        <article class="card">
+          <h3>Gestão & Lucratividade</h3>
+          <p class="muted">Custo por litro, indicadores, metas e tomada de decisão simples e objetiva.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="grid-2">
+      <div>
+        <!-- Use a sua foto 'pivo.jpg' no repositório -->
+        <img src="pivo.jpg" alt="Pivô central e pastagem" />
+      </div>
+      <div>
+        <h2>Sobre o Instrutor</h2>
+        <p class="muted"><strong>Juliano Alves</strong>, zootecnista formado pela FAZU (Uberaba‑MG), pós‑graduado em Administração Rural por Lavras. Trabalha há 20 anos na maior fazenda de leite a pasto do Brasil e agora compartilha todo esse conhecimento com você.</p>
+        <ul class="list">
+          <li>Foco em produtividade com sustentabilidade</li>
+          <li>Método aplicável a diferentes realidades</li>
+          <li>Materiais de apoio e exemplos reais</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PORTFÓLIO / GALERIA -->
+    <section id="portfolio">
+      <h2>Dentro do treinamento</h2>
+      <p class="muted">Alguns temas e materiais que você vai encontrar.</p>
+      <div class="cards">
+        <div class="card"><img src="vacas.jpg" alt="Manejo de pasto"/></div>
+        <div class="card"><img src="pivo.jpg" alt="Irrigação e manejo"/></div>
+        <div class="card"><img src="vacas.jpg" alt="Gestão e indicadores"/></div>
+      </div>
+    </section>
+
+    <!-- PREÇOS / PLANOS -->
+    <section id="inscricoes">
+      <h2>Inscrições</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Leite a Pasto 360</h3>
+          <p class="muted">Acesso completo ao treinamento + materiais de apoio.</p>
+          <ul class="list">
+            <li>Aulas em módulos</li>
+            <li>Planilhas e checklists</li>
+            <li>Suporte por e‑mail</li>
+          </ul>
+          <div class="cta" style="margin-top:12px">
+            <a class="btn primary" href="#contato">Quero reservar minha vaga</a>
+            <a class="btn" href="https://wa.me/55629999993090?text=Quero%20me%20inscrever%20no%20Leite%20a%20Pasto%20360" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="grid-2">
+      <div>
+        <h2>Perguntas Frequentes</h2>
+        <p class="muted">Responda às dúvidas comuns dos seus clientes.</p>
+        <details class="card">
+          <summary><strong>Posso editar o site?</strong></summary>
+          <p class="muted">Sim! Este arquivo é simples de modificar. Eu também posso cuidar das edições para você.</p>
+        </details>
+        <details class="card">
+          <summary><strong>Como publico?</strong></summary>
+          <p class="muted">Você pode usar GitHub Pages (gratuito) ou um provedor de hospedagem. Veja as instruções no final do arquivo.</p>
+        </details>
+        <details class="card">
+          <summary><strong>Tem suporte?</strong></summary>
+          <p class="muted">Claro. É só me chamar aqui e eu ajusto o que precisar.</p>
+        </details>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Equipe trabalhando" />
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="grid-2">
+      <div>
+        <h2>Fale com a equipe</h2>
+        <p class="muted">Preencha e clique em enviar. Você também pode alterar para integrar com WhatsApp ou e‑mail.</p>
+        <form class="card" onsubmit="enviar(event)">
+          <label>Nome<br/>
+            <input required name="nome" placeholder="Seu nome" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#0e1631;color:var(--text)" />
+          </label>
+          <br/>
+          <label>E‑mail<br/>
+            <input required type="email" name="email" placeholder="voce@email.com" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#0e1631;color:var(--text)" />
+          </label>
+          <br/>
+          <label>Mensagem<br/>
+            <textarea name="mensagem" rows="5" placeholder="Como podemos ajudar?" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#0e1631;color:var(--text)"></textarea>
+          </label>
+          <br/>
+          <button class="btn primary" type="submit">Enviar</button>
+        </form>
+      </div>
+      <div>
+        <div class="card">
+          <h3>Endereço</h3>
+          <p class="muted">E‑mail: <a href="mailto:juliano.alves.almeida@gmail.com">juliano.alves.almeida@gmail.com</a><br/>WhatsApp: <a href="https://wa.me/55629999993090" target="_blank" rel="noopener">(62) 99999‑3090</a>
+          <div class="social">
+            <a href="https://wa.me/55629999993090" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="mailto:juliano.alves.almeida@gmail.com">E‑mail</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>© <span id="ano"></span> Leite a Pasto 360. Todos os direitos reservados.</div>
+      <div style="text-align:right">Feito com ❤️ e foco em resultado.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Atualiza o ano no rodapé
+    document.getElementById('ano').textContent = new Date().getFullYear();
+
+    // Envia formulário por mailto (simples). Depois podemos integrar com Google Forms / API.
+    function enviar(e){
+      e.preventDefault();
+      const data = new FormData(e.target);
+      const nome = encodeURIComponent(data.get('nome'));
+      const email = encodeURIComponent(data.get('email'));
+      const msg = encodeURIComponent(data.get('mensagem'));
+      const assunto = `Contato do site — ${decodeURIComponent(nome)}`;
+      const corpo = `Nome: ${decodeURIComponent(nome)}%0AEmail: ${decodeURIComponent(email)}%0AMensagem:%0A${decodeURIComponent(msg)}`;
+      window.location.href = `mailto:juliano.alves.almeida@gmail.com?subject=${assunto}&body=${corpo}`;
+      alert('Abrimos seu e‑mail para enviar a mensagem. Se preferir, posso configurar outro método de envio.');
+    }
+  </script>
+
+  <!-- ================= INSTRUÇÕES RÁPIDAS =================
+  1) Como editar:
+     • Troque textos diretamente neste arquivo (procure por títulos/seções).
+     • Substitua imagens pelas suas (use links ou arquivos locais após hospedar).
+
+  2) Como publicar GRÁTIS (GitHub Pages):
+     • Crie uma conta em github.com.
+     • Clique em + > New repository > nome: meu-site > marque "Public".
+     • Adicione este arquivo como index.html (botão Add file > Create new file > cole o conteúdo > Commit).
+     • Vá em Settings > Pages > Branch: main (/root) > Save.
+     • Em 1–2 minutos, seu site abre no link mostrado em Pages.
+
+  3) Próximos passos que posso fazer por você:
+     • Colocar seu LOGO e suas cores.
+     • Configurar domínio .com.br.
+     • Criar páginas extras (Blog, Produtos, Orçamento, Área do Cliente).
+     • Integrar WhatsApp, formulário, Google Analytics e SEO.
+  ======================================================== -->
+</body>
+</html>
